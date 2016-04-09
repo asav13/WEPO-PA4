@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Beetroot-o-rama</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+
+    <div class="container well">                  
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="GameCanvasBackground">
+            <div id="onScreenScore"></div>
+            <div class="audioPlayer pull-left well well-sm">
+                
+                <button id="mute" type="button" class="btn btn-primary btn-xs">
+                    <span id="iconSpan" class='glyphicon glyphicon-volume-up'></span> Music On
+                </button>
+                
+                <button id="muteSound" type="button" class="btn btn-primary btn-xs">
+                    <span id="iconSpanSound" class='glyphicon glyphicon-volume-up'></span> Sound On
+                </button>
+
+                <audio id="audio" src="../sounds/circus_8bit.wav" autoplay loop></audio>
+                <audio id="audioExtra" src="../sounds/gallop.wav"></audio>
+                <audio id="flappingAudio" src="../sounds/star.wav"></audio>
+                <audio id="gameOverAudio" src="../sounds/gameover_8bit.wav"></audio>
+            </div>
+
+            <div class="GameCanvas">
+                <div class="BeetRoot"></div>
+                <div class="playerBlock">
+                    <div class="Player"></div>
+                </div>
+                <div class="ground"></div>
+
+                <div class="Scoreboard text-center">
+                    <br>
+                    <span class="Scoreboard-scoreText">Score: 
+                        <div id="score"></div>
+                    </span>
+                    <span class="Scoreboard-scoreText">Highscore: 
+                        <div id="highscore"></div>
+                    </span>
+                    <div class="btn-group-vertical" role="group">
+                        <button type="button" class="btn Levels-button Levels-button-easy">Easy</button>
+                        <button type="button" class="btn Levels-button Levels-button-medium">Medium</button>
+                        <button type="button" class="btn Levels-button Levels-button-hard">Hard</button>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+            <footer class="well well-xs text-center">
+                <small><span class="glyphicon glyphicon-star-empty"></span>
+                Created by: <a href="mailto:asav13@ru.is">asav13@ru.is</a>,
+                <a href="mailto:laurar14@ru.is">laurar14@ru.is</a>, 
+                <a href="mailto:vedise13@ru.is">vedise13@ru.is</a></small>
+            </footer>
+        </div> 
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <script src="scripts/controls.js"></script>
+        <script src="scripts/game.js"></script>
+        <script src="scripts/player.js"></script>
+        <script src="scripts/beetroot.js"></script>
+        <script src="scripts/utils.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
