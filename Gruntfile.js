@@ -61,6 +61,7 @@ module.exports = function (grunt) {
                 files: [
                     '<%= config.app %>/{,*/}*.html',
                     '.tmp/styles/{,*/}*.css',
+                '<%= config.app %>/sounds/{,*/}*',
                     '<%= config.app %>/images/{,*/}*'
                 ]
             }
@@ -202,6 +203,7 @@ module.exports = function (grunt) {
                         '<%= config.dist %>/styles/{,*/}*.css',
                         '<%= config.dist %>/images/{,*/}*.*',
                         '<%= config.dist %>/styles/fonts/{,*/}*.*',
+                        '<%= config.dist %>/sounds/{,*/}*.*',
                         '<%= config.dist %>/*.{ico,png}'
                     ]
                 }
